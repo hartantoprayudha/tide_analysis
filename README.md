@@ -19,6 +19,7 @@ Analisis data tinggi muka air (pasut) dalam **bahasa R**.
 
 ## Script
 - `tide_analysis.R`
+- `main_tide.R` (entry-point untuk memanggil fungsi di `tide_analysis.R`)
 
 ## Dependensi
 Minimal:
@@ -35,7 +36,7 @@ install.packages(c("readxl", "signal"))
 
 ## Contoh penggunaan
 ```bash
-Rscript tide_analysis.R \
+Rscript main_tide.R \
   --input data.xlsx \
   --sheet 1 \
   --timestamp-col "Timestamp" \
@@ -48,7 +49,7 @@ Rscript tide_analysis.R \
 
 Jika ingin menetapkan kandidat sensor manual:
 ```bash
-Rscript tide_analysis.R \
+Rscript main_tide.R \
   --input data.xlsx \
   --timestamp-col "Timestamp" \
   --sensor-cols "PRS1 (m),PRS2 (m),RAD1 (m)"

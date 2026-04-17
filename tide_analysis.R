@@ -348,4 +348,6 @@ main <- function() {
   cat(sprintf("- %s\n", plot_png))
 }
 
-main()
+if (sys.nframe() == 0) {
+  main()
+}
