@@ -19,7 +19,7 @@ Analisis data tinggi muka air (pasut) dalam **bahasa R**.
 
 ## Script
 - `tide_analysis.R`
-- `main_tide.R` (entry-point untuk memanggil fungsi di `tide_analysis.R`)
+- `main_tide.R` (entry-point user-friendly untuk memanggil fungsi di `tide_analysis.R`)
 
 ## Dependensi
 Minimal:
@@ -47,6 +47,11 @@ Rscript main_tide.R \
   --save-prefix output/tide
 ```
 
+Menampilkan bantuan penggunaan:
+```bash
+Rscript main_tide.R --help
+```
+
 Jika ingin menetapkan kandidat sensor manual:
 ```bash
 Rscript main_tide.R \
@@ -61,3 +66,11 @@ Rscript main_tide.R \
 - `*_harmonic_4const.csv`
 - `*_harmonic_9const.csv`
 - `*_timeseries.png`
+
+## Catatan perubahan `main_tide.R`
+- Menampilkan help message yang lebih jelas dan mudah dipahami.
+- Validasi awal yang lebih ramah pengguna:
+  - `--input` wajib diisi.
+  - file input harus ada.
+- Menampilkan pesan `[INFO]` saat proses berjalan dan selesai.
+- Menampilkan pesan `[ERROR]` yang lebih informatif jika proses gagal.
